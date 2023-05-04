@@ -139,7 +139,7 @@ const version = '1.0.1';
 
 var buildNs = function() {
     //build the URL: 
-    var url = "https://www.awin1.com/sread.img?tt=ns&tv=2&merchant=" + encodeUri(data.advertiserId + "&amount=" + AWIN.Tracking.Sale.amount + "&cr=" + AWIN.Tracking.Sale.currency + "&ref=" + AWIN.Tracking.Sale.orderRef  + "&parts=" + AWIN.Tracking.Sale.parts + "&vc=" + decodeUri(AWIN.Tracking.Sale.voucher) + "&customeracquisition=" + data.customerAcquisition + "&t=" + AWIN.Tracking.Sale.test + "&ch=" + AWIN.Tracking.Sale.channel + "&p1=gtmPlugin_" + version);
+    var url = "https://www.awin1.com/sread.img?tt=ns&tv=2&merchant=" + encodeUri(data.advertiserId + "&amount=" + AWIN.Tracking.Sale.amount + "&cr=" + AWIN.Tracking.Sale.currency + "&ref=" + AWIN.Tracking.Sale.orderRef  + "&parts=" + AWIN.Tracking.Sale.parts + "&vc=" + decodeUri(AWIN.Tracking.Sale.voucher) + "&customeracquisition=" + data.customerAcquisition + "&t=" + AWIN.Tracking.Sale.test + "&ch=" + AWIN.Tracking.Sale.channel);
     
     return url;
 };
@@ -160,7 +160,7 @@ AWIN.Tracking.Sale.voucher = encodeUri(data.voucher) || "";
 AWIN.Tracking.Sale.customerAcquisition = data.customerAcquisition || "";
 AWIN.Tracking.Sale.test = data.test;
 AWIN.Tracking.Sale.custom = [];
-AWIN.Tracking.Sale.custom[0] = "gtmPlugin_" + version;
+
 if (data.custom && getType(data.custom) == "array") {
   var index = 1;
   for (var i = 0; i < data.custom.length; i++) {
