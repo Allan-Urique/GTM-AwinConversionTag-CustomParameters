@@ -162,7 +162,7 @@ AWIN.Tracking.Sale.test = data.test;
 AWIN.Tracking.Sale.custom = [];
 
 if (data.custom && getType(data.custom) == "array") {
-  var index = 1;
+  var index = 0;
   for (var i = 0; i < data.custom.length; i++) {
     AWIN.Tracking.Sale.custom[index] = encodeUri(data.custom[i]);
     index++;
